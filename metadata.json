@@ -1,0 +1,6 @@
+{
+  "name": "KreatorPulse - CRM & Marketing Automation Engine",
+  "description": "Marketing automation and CRM for creators and solo agencies to track trending keywords, design marketing products, and auto-schedule multi-channel campaigns.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

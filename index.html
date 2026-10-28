@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KreatorPulse - CRM & Marketing Automation Engine</title>
+    <meta name="description" content="Marketing automation and CRM for creators and solo agencies to track trending keywords, design marketing products, and auto-schedule multi-channel campaigns." />
+    <meta property="og:title" content="KreatorPulse - CRM & Marketing Automation Engine" />
+    <meta property="og:description" content="Marketing automation and CRM for creators and solo agencies to track trending keywords, design marketing products, and auto-schedule multi-channel campaigns." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script>
+      // Cleanly intercept and suppress benign Vite HMR WebSocket connection logs and rejections in AI Studio preview
+      (function() {
+        var isWsIssue = function(val) {
+          if (!val) return false;
+          var s = String(val.message || val.reason || val.stack || val);
+          return s.includes('WebSocket') || s.includes('websocket') || s.includes('@vite/client');
+        };
+
+        window.addEventListener('unhandledrejection', function(event) {
+          if (isWsIssue(event.reason)) {
+            event.preventDefault();
+            if (event.stopImmediatePropagation) event.stopImmediatePropagation();
+          }
+        }, true);
+
+        window.addEventListener('error', function(event) {
+          if (isWsIssue(event.error) || isWsIssue(event.message)) {
+            event.preventDefault();
+            if (event.stopImmediatePropagation) event.stopImmediatePropagation();
+          }
+        }, true);
+
+        var origConsoleError = console.error;
+        console.error = function() {
+          for (var i = 0; i < arguments.length; i++) {
+            if (isWsIssue(arguments[i])) return;
+          }
+          origConsoleError.apply(console, arguments);
+        };
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
